@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-24T13:03:38.554Z",
+    "end": "2022-02-24T13:03:50.135Z",
+    "duration": 11581,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dc6a9f3b-2abf-48c2-a2aa-469d5c7a93fc",
+      "title": "",
+      "fullFile": "cypress/integration/homepage.ts",
+      "file": "cypress/integration/homepage.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "homepage test in en",
+          "fullTitle": "homepage test in en",
+          "timedOut": null,
+          "duration": 1935,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "homePage.navigate(homePage.blogURL_en);\ncy.wrap(pagesList_en).each((index) => {\n    let selectorName = 'homePage.blogHomePage_' + index;\n    homePage.verifySelectorContain(eval(selectorName), index.toString());\n});\nhomePage.verifySelectorContain(homePage.blogHomePage_Language, '中文');\ncy.wrap(pagesList_en).each((index) => {\n    let buttonName = 'homePage.blogHomePage_' + index;\n    let linkURL = homePage.blogURL_en + (index + '/').toLocaleLowerCase();\n    cy.log(buttonName);\n    cy.log(linkURL);\n    homePage.verifyButtonContain(eval(buttonName), linkURL);\n});\nhomePage.verifyButtonContain(homePage.blogHomePage_Language, 'https://AndrewWu29.github.io/zh-tw/');\ncy.wrap(pageButtons).each((index) => {\n    let buttonName = 'homePage.blogHomePage_Button' + index;\n    let link = 'homePage.blogHomePage_Link' + index;\n    cy.log(buttonName);\n    cy.log(link);\n    homePage.verifyButtonContain(eval(buttonName), eval(link));\n});",
+          "err": {},
+          "uuid": "0e64a5e8-b193-40c2-b7c7-da51de7f18d7",
+          "parentUUID": "dc6a9f3b-2abf-48c2-a2aa-469d5c7a93fc",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "homepage test in zh-tw",
+          "fullTitle": "homepage test in zh-tw",
+          "timedOut": null,
+          "duration": 829,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "homePage.navigate(homePage.blogURL_zhtw);\nlet indexCount = 0;\ncy.wrap(pagesList_en).each((index) => {\n    let selectorName = 'homePage.blogHomePage_' + index;\n    cy.log(selectorName);\n    homePage.verifySelectorContain(eval(selectorName), pagesList_zhtw[indexCount]);\n    indexCount += 1;\n});\nhomePage.verifySelectorContain(homePage.blogHomePage_Language, 'English');\ncy.wrap(pagesList_en).each((index) => {\n    let buttonName = 'homePage.blogHomePage_' + index;\n    let linkURL = homePage.blogURL_zhtw + (index + '/').toLocaleLowerCase();\n    cy.log(buttonName);\n    cy.log(linkURL);\n    homePage.verifyButtonContain(eval(buttonName), linkURL);\n});\nhomePage.verifyButtonContain(homePage.blogHomePage_Language, 'https://AndrewWu29.github.io/');\ncy.wrap(pageButtons).each((index) => {\n    let buttonName = 'homePage.blogHomePage_Button' + index;\n    let link = 'homePage.blogHomePage_Link' + index;\n    cy.log(buttonName);\n    cy.log(link);\n    homePage.verifyButtonContain(eval(buttonName), eval(link));\n});",
+          "err": {},
+          "uuid": "cf245ff3-8a7f-4a27-8d32-0a2c1296b621",
+          "parentUUID": "dc6a9f3b-2abf-48c2-a2aa-469d5c7a93fc",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "language change test en to zhtw",
+          "fullTitle": "language change test en to zhtw",
+          "timedOut": null,
+          "duration": 481,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "homePage.navigate('https://andrewwu29.github.io/');\nhomePage.clickButton(homePage.blogHomePage_Language);\nhomePage.verifySelectorContain(homePage.blogHomePage_Language, 'English');",
+          "err": {},
+          "uuid": "fcddb6cb-48ec-44b9-941a-9ad5372f1fce",
+          "parentUUID": "dc6a9f3b-2abf-48c2-a2aa-469d5c7a93fc",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "language change test zhtw to en",
+          "fullTitle": "language change test zhtw to en",
+          "timedOut": null,
+          "duration": 475,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "homePage.navigate('https://andrewwu29.github.io/zh-tw/');\nhomePage.clickButton(homePage.blogHomePage_Language);\nhomePage.verifySelectorContain(homePage.blogHomePage_Language, '中文');",
+          "err": {},
+          "uuid": "07eb458e-9442-49e2-9b61-0035f1da849a",
+          "parentUUID": "dc6a9f3b-2abf-48c2-a2aa-469d5c7a93fc",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "homepage redirect to subpages testing using menu button in en",
+          "fullTitle": "homepage redirect to subpages testing using menu button in en",
+          "timedOut": null,
+          "duration": 2771,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.wrap(pagesList_en).each((index) => {\n    homePage.navigate(homePage.blogURL_en);\n    let pageName = 'homePage.blogHomePage_' + index;\n    homePage.clickButton(eval(pageName));\n    homePage.verifySelectorContain('h1', index.toString());\n});",
+          "err": {},
+          "uuid": "2dd23bd8-a26b-4bdf-973d-7ae29923b258",
+          "parentUUID": "dc6a9f3b-2abf-48c2-a2aa-469d5c7a93fc",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "homepage redirect to subpages testing using menu button in zh-tw",
+          "fullTitle": "homepage redirect to subpages testing using menu button in zh-tw",
+          "timedOut": null,
+          "duration": 2613,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "let indexCount = 0;\ncy.wrap(pagesList_en).each((index) => {\n    homePage.navigate(homePage.blogURL_zhtw);\n    let pageName = 'homePage.blogHomePage_' + index;\n    homePage.clickButton(eval(pageName));\n    if (index.toString() === 'Categories') {\n        let containValue = 'Categories';\n        cy.log(containValue);\n        homePage.verifySelectorContain('h1', containValue);\n        indexCount += 1;\n    }\n    else {\n        cy.log(pagesList_zhtw[indexCount]);\n        homePage.verifySelectorContain('h1', pagesList_zhtw[indexCount].toString());\n        indexCount += 1;\n    }\n});",
+          "err": {},
+          "uuid": "62b5e104-b82e-449d-9f3a-40a8da84c33e",
+          "parentUUID": "dc6a9f3b-2abf-48c2-a2aa-469d5c7a93fc",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "0e64a5e8-b193-40c2-b7c7-da51de7f18d7",
+        "cf245ff3-8a7f-4a27-8d32-0a2c1296b621",
+        "fcddb6cb-48ec-44b9-941a-9ad5372f1fce",
+        "07eb458e-9442-49e2-9b61-0035f1da849a",
+        "2dd23bd8-a26b-4bdf-973d-7ae29923b258",
+        "62b5e104-b82e-449d-9f3a-40a8da84c33e"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 9104,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.0.1"
+    }
+  }
+}
