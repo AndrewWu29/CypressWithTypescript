@@ -7,5 +7,6 @@
         "html": false,
         "json": true,
         "reportDir":"cypress/reports"
-    }
+    },
+    "baseUrl": "https://andrewwu29.github.io/"
 }

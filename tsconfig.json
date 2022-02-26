@@ -100,5 +100,9 @@
   },
   "files": [
     "cypress"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*d.ts"
   ]
 }
