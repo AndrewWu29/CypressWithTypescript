@@ -16,7 +16,7 @@ export class BlogPostsPage extends BlogHomePage{
     verifyUrl(url: string){
         cy.url().should('include', url)
     }
-    verifyNotExists(attr: string, value: string){
-        cy.get(attr).not(value)
+    verifyNotExists(attr: string){
+        cy.get(attr).should('not.exist')
     }
 }
