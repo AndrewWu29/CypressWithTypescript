@@ -8,5 +8,7 @@
         "json": true,
         "reportDir":"cypress/reports"
     },
-    "baseUrl": "https://andrewwu29.github.io/"
+    "baseUrl": "https://andrewwu29.github.io/",
+    "video": false,
+    "chromeWebSecurity": false
 }
