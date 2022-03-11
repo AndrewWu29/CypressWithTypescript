@@ -58,3 +58,9 @@ To ignore push *.mp4 files
 
     # Ignore all mp4 files
     *.mp4
+
+## Testing my blog
+
+In command line:
+
+    npm test
